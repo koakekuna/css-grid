@@ -42,3 +42,18 @@ Hello! This repo is for tracking and documenting the lessons from Wes Bos's CSS 
   - can further be defined with grid-auto-columns
   - many items will create a horizontal scroll
 - similar to Flexbox's flex-direction
+
+## Lesson 7 - Sizing tracks in CSS Grid
+- use the fr (fractional) unit to divvy up the amount of free space remaining
+  - percentages don't take into account the grid-gaps
+  - grid-template-columns: 200px 1fr 1fr will create 1 column of 200px, and two columns that each take up 50% of the remaining space (2fr total)
+  - grid-template-columns: 200px 2fr 1fr will create 1 column of 200px, one column that takes up 66%, and a final column that takes up the remaining 33% (3fr total)
+  - grid-templates-columns: 200px 8fr will create 1 column of 200px, and another column that takes up 100% of the remaining space (8fr/8fr = 100%)
+- auto will adjust to the max size of the content
+  - so an item with a lot of text will have a larger size
+
+## Lesson 8 - CSS Grid repeat function
+- instead of grid-template-columns: 1fr 1fr 1fr 1fr, use repeat(4, 1fr);
+- repeat takes two values
+  - first value is the multiplier
+  - second value is whatever you want repeated
