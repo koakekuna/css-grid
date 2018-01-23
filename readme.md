@@ -57,3 +57,17 @@ Hello! This repo is for tracking and documenting the lessons from Wes Bos's CSS 
 - repeat takes two values
   - first value is the multiplier
   - second value is whatever you want repeated
+
+## Lesson 9 - Sizing Grid Items
+- defining a explicit width for an item in a column will make that entire column the width, and then any other elements with fr are divvied up
+- instead we can use 'grid-column: span 2' to span 2 items worth of space
+- if we have 5 columns, and we define 'grid-column: span 3' on the 4th item, the item will display on the next row
+- if we 'grid-column: span 10', and we only have 5 columns, it will force the item to be wider than the grid container edges (specified with the solid lines)
+
+## Lesson 10 - Placing Grid Items
+- use grid-column-start and grid-column-end to tell an item what track to start on and where to end (visually with the white number tags)
+- use the shorthand for columns and rows grid-column: 3 / 5
+  - you can also use span - grid-columN: 3 / span 2 to start on track 3 and span 2
+- use grid-column: 1 / -1 to span the entire width
+- be sure to define grid-template-rows when using grid-row: 1 / -1
+
