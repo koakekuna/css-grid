@@ -71,3 +71,26 @@ Hello! This repo is for tracking and documenting the lessons from Wes Bos's CSS 
 - use grid-column: 1 / -1 to span the entire width
 - be sure to define grid-template-rows when using grid-row: 1 / -1
 
+## Lesson 11 - Spanning and Placing Cardio
+- practice using different variations of previous lessons
+
+## Lesson 12 - auto-fit and auto-fill
+- auto-fill will automatically generate columns/rows depending on the size of the grid. It will responsively create or remove columns as the container is adjusted as well as move the explicit grid edge to the end of the container.
+- auto-fit will do the same, but if all the columns/rows fit in the container, the explicit grid edge will end at the last item
+
+## Lesson 13 - minmax() for Responsive Grid
+- use minmax to define how little or big items can be
+- useful with auto-fit to responsively generate items that can span the width of the grid
+- use fit-content() to 'clamp' the item at a desired value, if auto is stretching the item too much
+
+## Lesson 14 - Grid Template Areas
+- if we have a 3 x 3 grid, we can define areas with:
+  grid-template-areas:
+    "sidebar-1 content sidebar-2"
+    "sidebar-1 content sidebar-2"
+    "footer footer footer"
+- these areas will be shown visually with tags on the grid as well
+- then we can specify the items to take up the area with:
+  grid-area: footer
+- use media queries to easily switch the areas
+- you can use the area names in grid-column: 'areaname'-start / 'areaname'-end to define where the items should start or stop depending on the area
