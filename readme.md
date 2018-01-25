@@ -94,3 +94,13 @@ Hello! This repo is for tracking and documenting the lessons from Wes Bos's CSS 
   grid-area: footer
 - use media queries to easily switch the areas
 - you can use the area names in grid-column: 'areaname'-start / 'areaname'-end to define where the items should start or stop depending on the area
+
+## Lesson 15 - Naming Lines in CSS Grid
+- the way you can name the lines is by using square brackets like grid-template-columns: [site-left] 1fr [content-start] 500px [content-end] 1fr [site-right];
+- you can also have multiple names - [site-left sidebar-start]
+- then you can reference the lines - grid-row: content-top / content-bottom;
+- devtools don't show the lines, but maybe in a future update
+
+## Lesson 16 - grid-auto-flow dense Block Fitting
+- grid-auto-flow by default places items too wide for the container onto the next row, sometimes leaving a huge gap
+- using the dense option will have the same behavior, but it will look to see if any other items can fit in the space and fill it in
