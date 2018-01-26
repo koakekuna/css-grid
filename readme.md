@@ -133,3 +133,9 @@ Be sure to checkout and bookmark the CSS Tricks [article](https://css-tricks.com
   - with image source - `.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc > lorem10 ^ p.album__desc > lorem20`
   - multiplied - `(.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + h2.album__title{Album Title} + h3.album__artist{Artist Name} + p.album__desc + p.album__desc > lorem)*10`
   - no spaces `(.album>img.album__artwork[src="https://source.unsplash.com/random/300x300"]+.album__details>h2{Album Title}+p.album__artist{Artist Name}+p.album__desc>lorem10^p.album__desc>lorem20)*10`
+- must specify album image with `width: 100%`
+  - image from unsplash is 300px x 300px
+  - firefox will autoresize the image to fit the column, but chrome will not and the image will spill outside the column
+  - the container height will be 300px though, and the container will be taller than expected
+  - by specifying `width: 100%` we force the image to size itself not using its natural width of 300px, but rather the available space (which is a 150px column)
+  - the height will in turn kick the height to readjust since the images are proportional
