@@ -117,3 +117,19 @@ Be sure to checkout and bookmark the CSS Tricks [article](https://css-tricks.com
 - `justify-self` and `align-self` is useful to overwrite the alignment on a case by case basis for each item
 
 ## Lesson 18 - Re-ordering Grid Items
+- use the `order` property on specific items to rearrange them based on order
+- default is `order: 0`
+- don't use for content necessary for screen readers
+
+## Lesson 19 - Nesting Grid with Album Layouts
+- emmet expression for auto generating the ablums (with spaces for readability)
+  - base: `div > img + div > h2 + p + p + p`
+  - with classes: `.album > img.album__artwork + .album__details > h2.album__title + p.album__artist + p.album__desc + p.album__desc`
+  - with header text - `.album > img.album__artwork + .album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc + p.album__desc`
+  - with auto lorem text - `.album > img.album__artwork + album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc > lorem10 ^ p.album__desc > lorem20`
+    - Using `p.album__desc{lorem10}` *does not* work. It will return the text "lorem10" instead of generating lorem text
+    - Use `p.album__desc > lorem10` to properly generate lorem text
+    - Use `p.album__desc > lorem 10 ^ p.album__desc > lorem20` to go back up a level to generate another lorem paragraph
+  - with image source - `.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc > lorem10 ^ p.album__desc > lorem20`
+  - multiplied - `(.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + h2.album__title{Album Title} + h3.album__artist{Artist Name} + p.album__desc + p.album__desc > lorem)*10`
+  - no spaces `(.album>img.album__artwork[src="https://source.unsplash.com/random/300x300"]+.album__details>h2{Album Title}+p.album__artist{Artist Name}+p.album__desc>lorem10^p.album__desc>lorem20)*10`
