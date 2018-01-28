@@ -2,9 +2,9 @@
 
 # CSS Grid
 
-Hello! This repo is for tracking and documenting the lessons from Wes Bos's CSS Grid course. I plan to also include summaries of lessons learned after each topic.
+Hello! This repo is for tracking and documenting the lessons from Wes Bos's CSS Grid course. I also include summaries of lessons learned after each topic.
 
-Be sure to checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snippets/css/complete-guide-grid/) for more info
+Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snippets/css/complete-guide-grid/) for a thorough explanation of all grid concepts
 
 ## Lesson 3 - CSS Grid Fundamentals
 
@@ -122,20 +122,22 @@ Be sure to checkout and bookmark the CSS Tricks [article](https://css-tricks.com
 - don't use for content necessary for screen readers
 
 ## Lesson 19 - Nesting Grid with Album Layouts
-- emmet expression for auto generating the ablums (with spaces for readability)
+- emmet expression for auto generating the albums (with spaces for readability)
   - base: `div > img + div > h2 + p + p + p`
   - with classes: `.album > img.album__artwork + .album__details > h2.album__title + p.album__artist + p.album__desc + p.album__desc`
-  - with header text - `.album > img.album__artwork + .album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc + p.album__desc`
-  - with auto lorem text - `.album > img.album__artwork + album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc > lorem10 ^ p.album__desc > lorem20`
+  - with normal text: `.album > img.album__artwork + .album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc + p.album__desc`
+  - with auto lorem text: `.album > img.album__artwork + album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc > lorem10 ^ p.album__desc > lorem20`
     - Using `p.album__desc{lorem10}` *does not* work. It will return the text "lorem10" instead of generating lorem text
     - Use `p.album__desc > lorem10` to properly generate lorem text
     - Use `p.album__desc > lorem 10 ^ p.album__desc > lorem20` to go back up a level to generate another lorem paragraph
-  - with image source - `.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc > lorem10 ^ p.album__desc > lorem20`
-  - multiplied - `(.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + h2.album__title{Album Title} + h3.album__artist{Artist Name} + p.album__desc + p.album__desc > lorem)*10`
-  - no spaces `(.album>img.album__artwork[src="https://source.unsplash.com/random/300x300"]+.album__details>h2{Album Title}+p.album__artist{Artist Name}+p.album__desc>lorem10^p.album__desc>lorem20)*10`
+  - with image source: `.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + album__details > h2.album__title{Album Title} + p.album__artist{Artist Name} + p.album__desc > lorem10 ^ p.album__desc > lorem20`
+  - multiplied: `(.album > img.album__artwork[src="https://source.unsplash.com/random/300x300"] + h2.album__title{Album Title} + h3.album__artist{Artist Name} + p.album__desc + p.album__desc > lorem)*10`
+  - final - no spaces: `(.album>img.album__artwork[src="https://source.unsplash.com/random/300x300"]+.album__details>h2{Album Title}+p.album__artist{Artist Name}+p.album__desc>lorem10^p.album__desc>lorem20)*10`
 - must specify album image with `width: 100%`
   - image from unsplash is 300px x 300px
   - firefox will autoresize the image to fit the column, but chrome will not and the image will spill outside the column
   - the container height will be 300px though, and the container will be taller than expected
   - by specifying `width: 100%` we force the image to size itself not using its natural width of 300px, but rather the available space (which is a 150px column)
   - the height will in turn kick the height to readjust since the images are proportional
+
+  ## Lesson 20
