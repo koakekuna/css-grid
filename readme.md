@@ -140,4 +140,6 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
   - by specifying `width: 100%` we force the image to size itself not using its natural width of 300px, but rather the available space (which is a 150px column)
   - the height will in turn kick the height to readjust since the images are proportional
 
-  ## Lesson 20
+## Lesson 20 - CSS Grid Image Gallery
+- Use Array.from() and pass in a length property to generate an array of fixed length
+  - `Array.from({ length: 50 })`
