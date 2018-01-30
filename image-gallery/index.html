@@ -29,12 +29,12 @@
 
     function generateHTML([h, v]) {
       return `
-      <div class="item h${h} v${v}">
-        <img src="images/${randomNumber(12)}.jpg">
-        <div class="item__overlay">
-          <button>View -></button>
+        <div class="item h${h} v${v}">
+          <img src="images/${randomNumber(12)}.jpg">
+          <div class="item__overlay">
+            <button>View -></button>
+          </div>
         </div>
-      </div>
       `;
     }
 
@@ -42,9 +42,16 @@
       return Math.floor(Math.random() * limit) + 1;
     }
 
-    const digits = Array.from({ length: 50 }, () => 
-    [randomNumber(4), randomNumber(4)]);
+    const digits = Array.from({ length: 50 }, () =>
+    [randomNumber(4), randomNumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1],
+    [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
+    [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]]);
+
     console.log(digits);
+
+    const html = digits.map(generateHTML).join('');
+    gallery.innerHTML = html;
+
   </script>
 </body>
 </html>

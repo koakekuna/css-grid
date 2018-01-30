@@ -141,5 +141,27 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
   - the height will in turn kick the height to readjust since the images are proportional
 
 ## Lesson 20 - CSS Grid Image Gallery
-- Use Array.from() and pass in a length property to generate an array of fixed length
-  - `Array.from({ length: 50 })`
+- we need a couple helper functions to create the gallery:
+  - randomNumber - generates random numbers
+    - we pass in a limit, so we can have a range from 1 to the limit
+  - generateHTML - generates the grid items
+    - we pass through two parameters, h and v, for the horizontal and vertical values
+    - these values are between 1 and 4, and denote how tall and wide the grid item is
+    - the values are then used as class names for the items: `<div class="item h2 v3"></div>`
+    - the image source is also randomly generated, since the file names are from 1 - 12: "7.jpg"
+- Cool Trick! Use Array.from() and pass in a length property to generate an array of fixed length
+  - `Array.from({ length: 50 })` will generate 50 empty arrays
+  - You can also pass a map function to generate the contents of each array
+  - we use the randomNumber function to generate arrays with two values each ranging from 1 - 4
+    - `const digits = Array.from({ length: 50 }, () => [randomNumber(4), randomNumber(4)])`
+- We can then apply the generateHTML function to each of these arrays and join them to generate a huge string containing all the grid items
+  - `const html = digits.map(generateHTML).join('')`
+- Grid is AMAZING for overlaying items
+  - set the GRID up with only 1 column and 1 row: `grid-template-columns: 1` and `grid-template-rows: 1`
+  - set the first GRID ITEM's `grid-column: 1 / -1` and `grid-row: `
+  - set the second GRID ITEM's `grid-column` and `grid-row` to 1 / -1
+  - because of the flow of the document, the second Grid Item will overlay on top of the first
+  - we can also use z-index by setting the `position: relative` and `z-index: 2`
+
+- use object-fit to trim the edges of the images to fit as much as possible without stretching (kind of like `background-size: cover;`)
+  - be sure to set width and height 100% too
