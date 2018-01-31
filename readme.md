@@ -162,6 +162,5 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
   - set the second GRID ITEM's `grid-column` and `grid-row` to 1 / -1
   - because of the flow of the document, the second Grid Item will overlay on top of the first
   - we can also use z-index by setting the `position: relative` and `z-index: 2`
-
 - use object-fit to trim the edges of the images to fit as much as possible without stretching (kind of like `background-size: cover;`)
   - be sure to set width and height 100% too
