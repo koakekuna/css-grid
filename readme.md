@@ -114,7 +114,7 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
 - `justify-items` and `align-items` aligns the content within a grid item
   - can use the shorthand `place-items` to specify both at once (but beware browser support)
 - `justify-content` and `align-content` is useful if your grid is smaller than the container itself (which can happen if items are sized with px), and then you can set the alignment of the grid within the container
-- `justify-self` and `align-self` is useful to overwrite the alignment on a case by case basis for each item
+- `justify-self` and `align-self` is usful to overwrite the alignment on a case by case basis for each item
 
 ## Lesson 18 - Re-ordering Grid Items
 - use the `order` property on specific items to rearrange them based on order
@@ -164,3 +164,29 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
   - we can also use z-index by setting the `position: relative` and `z-index: 2`
 - use object-fit to trim the edges of the images to fit as much as possible without stretching (kind of like `background-size: cover;`)
   - be sure to set width and height 100% too
+- setting `display: grid` on the item overlay will stretch the button and cover the entire item
+  - `justify-items` and `align-items` default is `stretch`
+  - so we specify `place-items: center` to center both horizontally and vertically
+
+## Lesson 21 - Flexbox vs CSS Grid
+- flexbox is 1d only and grid is 2d only isn't accurate, grid can be good for one axis as well
+- pros for flexbox
+  - can be transitioned, so no fancy animations with Grid
+  - wider browser support
+- pros for grid
+  - much more consistent across all the browsers, not as many bugs
+- axis-flipping
+  - easy to transition from single axis to more
+  - e.g. if you're designing something with a row, and want more rows, it's very easy to add more rows
+  - flex-box has the ability to row reverse and column reverse, which would take the items and flip them in the opposite direction,and while grid can do something similar with the order property, it would be tedius to assign an order property to each item.
+- controls-on-right
+  - setting `grid-auto-flow: column` (default is row) allows you to easily add columns to the end
+- flex-on-item
+  - applying flex directly on element is useful
+  - using flexbox and `flex: 1` on a specific element you want to take up a lot of space is convienent and flexible
+  - versus using grid where `grid-template-columns: auto auto 1fr auto auto` can be inflexible if you remove one of the items
+- perfectly centered
+  - both flexbox and grid are useful
+- self-control
+  - only doable in grid, if you want something aligned to the four corners of the container
+  
