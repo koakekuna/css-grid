@@ -175,18 +175,24 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
   - wider browser support
 - pros for grid
   - much more consistent across all the browsers, not as many bugs
-- axis-flipping
+- [axis-flipping](https://codepen.io/kkekuna/pen/qxOvdL)
   - easy to transition from single axis to more
   - e.g. if you're designing something with a row, and want more rows, it's very easy to add more rows
   - flex-box has the ability to row reverse and column reverse, which would take the items and flip them in the opposite direction,and while grid can do something similar with the order property, it would be tedius to assign an order property to each item.
-- controls-on-right
+- [controls-on-right](https://codepen.io/kkekuna/pen/RQWdjW)
   - setting `grid-auto-flow: column` (default is row) allows you to easily add columns to the end
-- flex-on-item
+- [flex-on-item](https://codepen.io/kkekuna/pen/bLVJzz)
   - applying flex directly on element is useful
   - using flexbox and `flex: 1` on a specific element you want to take up a lot of space is convienent and flexible
   - versus using grid where `grid-template-columns: auto auto 1fr auto auto` can be inflexible if you remove one of the items
-- perfectly centered
+- [perfectly-centered](https://codepen.io/kkekuna/pen/qxOGWX)
   - both flexbox and grid are useful
-- self-control
+- [self-control](https://codepen.io/kkekuna/pen/BYoeaM)
   - only doable in grid, if you want something aligned to the four corners of the container
-  
+  - use `align-self` and `justify-self` to overwrite the default alignments
+- [stacked-layout](https://codepen.io/kkekuna/pen/mXeYLo)
+  - One of the constraints of grid is that you can't have rows that are different sizes
+  - Flexbox can do this with `justify-content: space-between` or `justify-content: space-around`
+- [unknown-content-size](https://codepen.io/kkekuna/pen/BYoeOa)
+  - if you ever know the amount of columns that you have but do not know how much content will be inside each one`
+- [unknown-number-of-items]
