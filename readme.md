@@ -195,4 +195,10 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
   - Flexbox can do this with `justify-content: space-between` or `justify-content: space-around`
 - [unknown-content-size](https://codepen.io/kkekuna/pen/BYoeOa)
   - if you ever know the amount of columns that you have but do not know how much content will be inside each one`
-- [unknown-number-of-items]
+- [unknown-number-of-items](https://codepen.io/kkekuna/pen/ZrbNqy)
+  - use repeat, auto-fit, and minmax to fit as many items as possible into a row with each item shrinking to a defined limit, and then it wraps to the next row
+  - `grid-template-columns: repeat(autofit, minmax(50px, 1fr));`
+  - can use Flexbox too, but as soon as the row wraps, there's some weird margin stuff that happens
+- [variable-widths-each-row](https://codepen.io/kkekuna/pen/wyMENE)
+  - only Flexbox allows you to have variable widths for each row
+  - there are issues with applying margin, and hopefully a flex-gap will be introduced to handle that better
