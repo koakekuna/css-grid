@@ -202,3 +202,16 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
 - [variable-widths-each-row](https://codepen.io/kkekuna/pen/wyMENE)
   - only Flexbox allows you to have variable widths for each row
   - there are issues with applying margin, and hopefully a flex-gap will be introduced to handle that better
+
+## Lesson 22 - Recreating Codepen
+- cool little [trick](https://codepen.io/kkekuna/pen/PQNQrg) for the save button on codepen
+
+## Lesson 23 - Bootstrappy Grid with CSS Variables
+- rigid grid frameworks like Bootstrap can be built from scratch  with grid but there are some issues
+  - if you use `fr` units to define the columns, the content may stretch out the columns
+  - if you use percentages instead, the `grid-gap` gets in the way
+  - couple hacks
+    - give the item a `min-width: 0`
+    - define the grid `grid-template-columns: repeat(12, minmax(0, 1fr));` and give the item `width: 100%`
+- can create custom classes like `span3` which would span 3 columns
+- can create a variable called `--span` and then give the element a style attribute of `--span: 3`
