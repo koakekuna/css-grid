@@ -215,3 +215,5 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
     - define the grid `grid-template-columns: repeat(12, minmax(0, 1fr));` and give the item `width: 100%`
 - can create custom classes like `span3` which would span 3 columns
 - can create a variable called `--span` and then give the element a style attribute of `--span: 3`
+
+## Lesson 24 - Responsive Website
