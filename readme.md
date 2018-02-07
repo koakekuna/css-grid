@@ -217,3 +217,6 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
 - can create a variable called `--span` and then give the element a style attribute of `--span: 3`
 
 ## Lesson 24 - Responsive Website
+- we can add `display: grid` to the site-wrapper and give a `grid-gap: 20px` to automatically give all the items an easy pseudo-margin
+- `grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));` is really handy and useful
+- we can add `display: grid` to something like an `h2`, and the grid items will be the `h2:before` and `h2:after`
