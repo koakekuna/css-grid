@@ -143,9 +143,59 @@ img {
   display: block;
   content: '';
   height: 10px;
-  background: linear-gradient(to var(--dirction), left), var(--yellow), transparent);
+  background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
 }
 
 .gallery h2:after {
   --direction: right;
 }
+
+@media(max-width: 1000px) {
+  .menu {
+    order: -1;
+    perspective: 100px;
+  }
+
+  [aria-controls="menu-list"] {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .menu ul {
+    max-height: 0;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.5s;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: grid;
+    max-height: 500px;
+    transform: rotateX(0);
+  } 
+}
+
+@media(max-width: 700px) {
+  .top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "hero hero"
+    "cta1 cta2"
+    ;
+  }
+}
+
+@media (max-width: 500px) {
+  .top {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "hero"
+    "cta1"
+    "cta2"
+    ;
+  }
+}
+
