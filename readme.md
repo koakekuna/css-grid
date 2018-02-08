@@ -219,4 +219,6 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
 ## Lesson 24 - Responsive Website
 - we can add `display: grid` to the site-wrapper and give a `grid-gap: 20px` to automatically give all the items an easy pseudo-margin
 - `grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));` is really handy and useful
-- we can add `display: grid` to something like an `h2`, and the grid items will be the `h2:before` and `h2:after`
+- we can add `display: grid` to [headers](https://codepen.io/kkekuna/pen/VQPymB)!
+  - The grid items become the `h2:before`, the content, and the `h2:after`
+- [nav menu with flip effect](https://codepen.io/kkekuna/pen/OQWQZm);
