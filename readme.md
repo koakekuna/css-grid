@@ -222,3 +222,6 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
 - we can add `display: grid` to [headers](https://codepen.io/kkekuna/pen/VQPymB)!
   - The grid items become the `h2:before`, the content, and the `h2:after`
 - [nav menu with flip effect](https://codepen.io/kkekuna/pen/OQWQZm);
+
+## Lesson 25 - Full Bleed Blog Layout
+- 
