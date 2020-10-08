@@ -50,7 +50,7 @@ Also checkout and bookmark the CSS Tricks [article](https://css-tricks.com/snipp
   - percentages don't take into account the grid-gaps
   - `grid-template-columns: 200px 1fr 1fr` will create 1 column of 200px, and two columns that each take up 50% of the remaining space (2fr total)
   - `grid-template-columns: 200px 2fr 1fr` will create 1 column of 200px, one column that takes up 66%, and a final column that takes up the remaining 33% (3fr total)
-  - `grid-templates-columns: 200px 8fr` will create 1 column of 200px, and another column that takes up 100% of the remaining space (8fr/8fr = 100%)
+  - `grid-template-columns: 200px 8fr` will create 1 column of 200px, and another column that takes up 100% of the remaining space (8fr/8fr = 100%)
 - auto will adjust to the max size of the content
   - so an item with a lot of text will have a larger size
 
